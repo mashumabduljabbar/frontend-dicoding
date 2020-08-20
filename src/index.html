@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Box-Office | Film Box Office</title>
+</head>
+
+<body>
+  <header-navigation></header-navigation>
+
+  <main class="container">
+    <header-jumbotron title="Popular Movies"
+      description="Check out the most popular movies in Box-Office Movies">
+    </header-jumbotron>
+
+    <section class="row mb-2">
+      <div class="col-sm-12 col-md-3">
+        <h5 class="pt-1">Movies ‍🍳</h5>
+      </div>
+      <div class="col-sm-12 col-md-9">
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <search-bar></search-bar>
+          </div>
+          <div class="col-5 d-sm-none d-md-block text-right">
+            <dropdown-sort></dropdown-sort>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="d-none d-md-block col-3">
+        <div class="d-flow-root">
+          <h6 class="float-left">Filter by Genre :</h6>
+          <a href="javascript:void(0)" id="clearFilter" class="text-filter float-right">Clear filter</a>
+        </div>
+        <hr>
+        <movie-category></movie-category>
+        <card-author></card-author>
+      </div>
+      <div class="col-sm-12 col-md-9">
+        <movie-list></movie-list>
+        <div id="loader-text" class="loader loader-default is-active" style="display: none;">
+          <div class="loader-message">Loading</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="details container mb-5" style="display:none;">
+    <breadcrumb-detail currentpage=""></breadcrumb-detail>
+
+    <div class="row">
+      <div class="col-12 col-md-5 mb-2">
+        <img src="" id="detailImage" class="img-fluid img-shadow">
+      </div>
+      <div class="col-12 col-md-7">
+        <detail-header title="" sourceName="" preparationMinutes="" servings="" summary="">
+        </detail-header>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
